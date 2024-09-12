@@ -1,2 +1,9 @@
 <h1>Product page</h1>
 {{queryset}}#django templates
+
+<form method="POST">
+  <input type="text" placeholder="Search here ..." name="search" />
+  <button type="submit">Search</button>
+</form>
+
+{% for q in queryset %} {{q.name}} {% endfor %}
