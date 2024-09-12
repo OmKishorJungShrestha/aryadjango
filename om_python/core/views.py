@@ -51,12 +51,16 @@ def about_view(request):
 
 def product_view(request):
    #print(request.post)
-   data = request.post
+   data = request.POST
     # Retrieve all categories from the database
    queryset = Category.objects.all()  # Select all categories
    if data:
-        queryset =queryset.filter(name=data,get("sarch"))
+       # select * from coategory where name = data.get("search")
+        queryset =queryset.filter(name=data.get("search"))
     # Prepare the context for the template
    context = {"queryset": queryset}
     # Render the product.html template with the context
    return render(request, "product.html", context)
+
+
+
