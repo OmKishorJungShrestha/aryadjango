@@ -5,7 +5,7 @@ class BookListAPIView(APIView):
     def get(self, request, *args, **kwargs):
         # Create a list of books
         response = [
-            {"name": "Think and Grow Rich", "author": "Napoleon Hill","products": products } 
+            {"name": "Think and Grow Rich", "author": "Napoleon Hill","products": Product } 
             
         ]
         # Return the response with the book data
