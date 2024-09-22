@@ -9,3 +9,7 @@ class BookListAPIView(APIView):
         ]
         # Return the response with the book data
         return Response(response)
+    
+    def post(self,request,*args,**kwargs):
+        return Response({"response":"request received"})
+    
