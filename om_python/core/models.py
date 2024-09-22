@@ -68,3 +68,4 @@ class Product(models.Model):
 
 class ProductCart(models.Model):  # Fixed: Changed 'Models' to 'Model'
     pass
+# i dont know whats going on
