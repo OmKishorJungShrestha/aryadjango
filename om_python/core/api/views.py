@@ -13,4 +13,5 @@ class BookListAPIView(APIView):
     
     def post(self,request,*args,**kwargs):
         return Response({"response":"request received"})
+    #this is framework implemenatation in django
     
