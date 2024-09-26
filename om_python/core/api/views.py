@@ -25,7 +25,14 @@ class BookListAPIView(APIView):
         return Response(response)
     
     def post(self,request,*args,**kwargs):
-        return Response({"response":"request received"})
+        print(request.query_params)
+        print(request.data)
+        search = request.query_params.get("search")
+        product=Product.objects.filter(name_icontains=search)
+        serializer =ProductSerializer(product, many=True)
+        return Response(serializer.data)
+    
+    #    return Response({"response":"request received"})
     
     
     
