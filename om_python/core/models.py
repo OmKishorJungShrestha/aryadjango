@@ -68,3 +68,8 @@ class Product(models.Model):
 
 class ProductCart(models.Model):  # Fixed: Changed 'Models' to 'Model'
     pass
+
+'''class Genre(models.Model):
+    pass
+
+'''
